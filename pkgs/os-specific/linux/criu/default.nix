@@ -65,6 +65,7 @@ stdenv.mkDerivation rec {
       "powerpc" = "ppc64";
       "s390" = "s390";
       "mips" = "mips";
+      "loongarch64" = "loongarch64";
     };
   in [
     "PREFIX=$(out)"
