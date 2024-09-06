@@ -37,6 +37,7 @@ let
     "s390x" = "s390x";
     "x86_64" = "amd64";
     "wasm32" = "wasm";
+    "loongarch64" = "loong64";
   }.${platform.parsed.cpu.name} or (throw "Unsupported system: ${platform.parsed.cpu.name}");
 
   # We need a target compiler which is still runnable at build time,
