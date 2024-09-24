@@ -100,6 +100,7 @@ let
                     else if platform.isx86_32 then "x86"
                     else if platform.isS390 && platform.is64bit then "s390x"
                     else if platform.isRiscV && platform.is64bit then "riscv64"
+                    else if platform.isLoongArch64 then "loong64"
                     else throw "unsupported cpu ${stdenv.hostPlatform.uname.processor}"}"
     ]) ++ (lib.optionals (isCross && isAarch32 && lib.hasAttr "fpu" gcc) [
       "--with-arm-fpu=${gcc.fpu}"
